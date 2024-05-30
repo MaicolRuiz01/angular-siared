@@ -1,0 +1,11 @@
+{
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "inlineStyle": true,
+            "skipStyle": true
+        },
+        "angular-component": {
+            "ngOnInit": true
+        }
+    }
+}

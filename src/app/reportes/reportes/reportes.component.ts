@@ -19,4 +19,15 @@ export class ReportesComponent {
       console.error('Error generating report', error);
     });
   }
+
+  generarFormato14() {
+    const formato14Id = 1; // Reemplaza con el ID real que necesitas
+    this.reportesService.downloadFormato14(1).subscribe(response => {
+      const blob = new Blob([response], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+      saveAs(blob, 'proyecto.docx');
+    }, error => {
+      console.error('Error generating formato 14', error);
+    });
+  }
+
 }
